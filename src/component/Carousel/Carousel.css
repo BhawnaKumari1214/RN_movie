@@ -1,0 +1,38 @@
+
+
+#carouselSlide > img{
+    width: 100%;
+    mask-image: linear-gradient( 90deg ,rgba(0,0,0, 0.5 ) , rgba(0,0,0, 0.3), rgba(0,0,0, 0.15 )  );
+}
+
+.slick-prev:before,
+.slick-next:before {
+  border-radius: 50%;
+  font-size: 30px ;
+  opacity: .4;
+}
+.slick-prev:hover:before , .slick-next:hover:before{
+    opacity: 0.75;
+    /* background: black; */
+}
+
+.slick-prev ,
+.slick-next {
+    height: auto;
+    width: auto;
+}
+
+.slick-dots {
+    z-index: 20;
+    position: absolute;
+    bottom: 15px !important ;
+}
+.slick-dots li button:before {
+    font-size: 9px;
+    color: white !important;
+
+  }
+.slick-dots li.slick-active button:before {
+    color: white !important ;
+    opacity: 0.85;
+}

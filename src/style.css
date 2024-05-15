@@ -1,0 +1,99 @@
+
+
+.swiperBtn{
+    position: absolute;
+    z-index: 10 ;
+    padding: 0 5px;
+    height: 100% ;
+    width: 5% ;
+    display: flex;
+    align-items: center;
+    backdrop-filter: blur(0.5px)  ;
+    color: white ;
+    font-size: xx-large ;
+}
+
+.swiperLeft{
+    left: 0;
+    justify-content: flex-start;
+    /* background: linear-gradient(to right, rgba(0, 0, 0, 0.4) 30% , transparent ) ; */
+    background: linear-gradient(to right, #0f1014f4 0.6% , rgba(0, 0, 0, 0.02) 99.5%  ) ;
+}
+.swiperRight{
+    right: 0;
+    justify-content: flex-end;
+    background: linear-gradient(to left, #0f1014f4 0.6% , rgba(0, 0, 0, 0.02) 99.5%  ) ;
+}
+
+.swiperLeft:hover{
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7) 30% ,  rgba(0, 0, 0, 0.5) 50%, transparent ) ;
+}
+.swiperRight:hover{
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.7) 30% , rgba(0, 0, 0, 0.5) 50%, transparent ) ;
+}
+
+/*  movie section  */
+
+.movieSection{
+    /* height: 100% ; */
+    width: 100%;
+    padding: 2px 0;
+    padding-left: 2px;
+}
+
+.movieSectionHeader p.seeAll {
+    padding-right: 2px;
+    transition: all 0.8s ;
+}
+
+.slider{
+    width: fit-content ;
+    display: flex;
+    gap: 5px;
+}
+
+.movie{
+    min-width: 180px ;
+    min-height: 300px;
+
+    width: 200px ;
+    height: 280px ;
+}
+.movie img{
+    width: 100% ;
+    height: 100% ;
+    object-fit: cover ;
+    object-position: center ; 
+    /* object-position : x-position y-position */
+}
+
+
+
+
+  /* #SliderSection {
+    scroll-behavior: smooth;
+    transition: scroll 0.3s ease-in-out;
+  } */
+
+  /* #AllMovieSection button{
+    position: absolute;
+    height: 100%;
+    z-index: 10;
+    font-size: 25px;
+    color: rgba(255, 255, 255, 0.973) ;
+    transition: all 0.2s linear ;
+  } */
+ 
+  /* .btnPrev{
+    background: linear-gradient(to right , rgba(0, 0, 0, 0.75) 16% , rgba(0, 0, 0, 0.25) , transparent ) ;
+  } */
+  /* .btnNext{
+    background: linear-gradient(to left ,rgba(0, 0, 0, 0.75) 16% , rgba(0, 0, 0, 0.25) , transparent ) ;
+  } */
+
+  /* .btnPrev:hover{
+    background: linear-gradient(to right  , rgba(0, 0, 0, 0.95) 16%  , rgba(0,0,0, 0.55), transparent ) ;
+  } */
+  /* .btnNext:hover{
+    background: linear-gradient(to left ,rgba(0, 0, 0, 0.95) 16% , rgba(0,0,0, 0.55), transparent ) ;
+  } */

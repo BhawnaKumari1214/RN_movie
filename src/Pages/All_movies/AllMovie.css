@@ -1,0 +1,11 @@
+
+.movieCard {
+    width: 150px ;
+    transition: transform 0.3s linear  ;
+}
+
+/* .movieCard:hover{
+    z-index: 99;
+    transform: scale(1.8 , 1.6) ;
+} */
+

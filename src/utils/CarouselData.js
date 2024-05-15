@@ -1,0 +1,52 @@
+import { Avatar, Avatar_Title, BeautyBeast, BeautyBeast_Title, SpiderMan, SpiderMan_title } from "../component/Carousel/imagesExports";
+
+export const carouselData = [
+    {
+        id : '1',
+        movieName : 'Beauty and the Beast',
+        description : `In a charming tale, a young prince's vanity leads to a curse, transforming him into a beast. His redemption lies in learning to love and earn another's love in return. Through this enchanting journey, the story explores themes of inner beauty, compassion, and personal growth.`,
+        image : `${BeautyBeast}` ,
+        title_img : `${BeautyBeast_Title}` ,
+        sm_width : "280px",
+        md_width : "350px",
+        img_width : '240px',
+        margin_b : "mb-5",
+        scaleX :  "-1",
+    },
+    {
+        id : '2',
+        movieName : 'Avatar',
+        description : `On a distant world, a couple navigates parenthood amid environmental threats. Encounters with a hybrid being and a young native challenge their beliefs. As human intruders and ecological crises loom, they rediscover life's interconnectedness, reigniting their commitment to protect their planet.` ,
+        image : `${Avatar}` ,
+        title_img : `${Avatar_Title}`,
+        sm_width : "320px", 
+        md_width : "380px",
+        img_width : '300px',
+        margin_b : "mb-1",
+        scaleX :  "-1",
+        // height : "36"
+    },
+    {
+        id : '3',
+        movieName : 'spiderMan',
+        description : `Peter Parker's world is turned upside down when his identity as Spider-Man is exposed, seeking help from Doctor Strange, he must face villains from other realities, challenging his understanding of power and responsibility in a multiverse-shattering adventure.`,
+        image : `${SpiderMan}` ,
+        title_img : `${SpiderMan_title}`,
+        sm_width : "", 
+        md_width : "",
+        img_width : 'w-[300px]',
+        margin_b : "mb-[-10px]",
+        scaleX :  "1",
+    },
+    // {
+    //     id : '2',
+    //     movieName : '',
+    //     description_short : '',
+    //     description_short : '',
+    //     image : `${}` ,
+    //     title_img : `${}`,
+    //     sm_width : "", 
+    //     md_width : "",
+    //     margin_b : "",
+    // },
+]

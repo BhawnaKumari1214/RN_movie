@@ -1,0 +1,21 @@
+
+/* button.logo span{
+    -webkit-background-clip: text ;
+    -webkit-text-fill-color: transparent ;
+} */
+
+.navbar{
+    /* background: rgba(255, 254, 254, 0.071); */
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(1px);
+    /* backdrop-filter: blur(3.9px);
+    -webkit-backdrop-filter: blur(3.9px); */
+}
+
+.userProfileDetail{
+    display: none;
+}
+.userProfileIcon:hover + .userProfileDetail{
+    display: inline;
+}

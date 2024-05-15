@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="h-screen w-full overflow-hidden bg-slate-900 flex flex-col gap-8 items-center justify-center">
+        <div class="relative h-60 w-[50%] max-w-[600px] border border-white">
+            <div class="slides absolute h-full w-full">
+                <img src="../src/assets//carousel/beautyBeast.jpg" alt="" class="size-full  object-cover">
+            </div>
+            <div class="slides absolute w-full h-full ">
+                <img src="../src/assets//carousel/Avatar.jpg" alt="" class="size-full  object-cover">
+            </div>
+            <div class="slides absolute h-full w-full">
+                <img src="../src/assets//carousel/spiderMan.jpg" alt="" class="size-full  object-cover">
+            </div>
+
+            <Arrows />
+        </div>
+
+        <div class="w-full h-8 justify-center flex gap-2 " >
+            <div class="h-4 w-4 flex items-center justify-center rounded-full border-[1px] border-white/60 ">
+                <p class="p-1 rounded-full bg-gray-400" ></p>
+            </div>
+            <div class="h-4 w-4 flex items-center justify-center rounded-full border-[1px] border-white/60 ">
+                <p class="p-1 rounded-full bg-gray-400" ></p>
+            </div>
+            <div class="h-4 w-4 flex items-center justify-center rounded-full border-[1px] border-white/60 ">
+                <p class="p-1 rounded-full bg-gray-400" ></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const slides = document.querySelectorAll('.slides')
+        let counter = 0 ;
+        let count = -1 ;
+
+        console.log(slides)
+
+        slides.forEach((element , index ) => {
+            element.style.left = `${index * 100}%` ;
+        });
+
+        function handlePrev(){
+            if(counter == 0 ){
+                counter = slides.length - 1 ;
+            }else{
+                counter -- ;
+            }
+            slideImage()
+        }
+        function handleNext(){
+            if(counter == slides.length - 1 ){
+                counter = 0 ;
+            }else{
+                counter ++ ;
+            }
+            slideImage()
+        }
+
+        const slideImage = () =>{
+            console.log('radheradhe')
+            slides.forEach(slide => {
+                slide.style.transform = `translateX(-${counter * 100}%)`
+                // setTimeout(() => {
+                //     slide.style.zIndex = '-1';
+                //     slide.style.transform = `translateX(${(slides.length) - counter * 100}%)` ;
+                // }, 2000);
+            })
+        }
+
+        setInterva(() => {
+            if(counter < slides.length - 1 ) counter++ ;
+            else if(counter == slides.length - 1 ) counter = 0 ;
+            
+            slideImage()
+            console.log(counter)
+        }, 2000);
+
+
+    </script>
+</body>
+</html>
