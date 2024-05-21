@@ -57,13 +57,13 @@ function Carousel() {
             const {id , movieName , image , title_img , description , img_width , margin_b , scaleX } = item ;
             // alert(img_width)
             return (   
-            <div  id='carouselSlide' key={id} className="carouselSlide relative bg-black w-full h-[600px] sm:h-[550px] md:h-[580px] ">
+            <div  id='carouselSlide' key={id} className="carouselSlide relative bg-black w-full border-none  h-[600px] sm:h-[550px] md:h-[580px] xl:h-[600px] ">
               
-              <img src={image} alt={movieName} className= {`size-full object-cover scale-x-[${scaleX}] object-center `} />
+              <img src={image} alt={movieName} className= {`size-full h-full object-cover scale-x-[${scaleX}] object-center `} />
 
               <div className="absolute z-10 bottom-6 px-16 md:px-20 pb-9 md:pb-12  " >
                 <div className= {` w-[250px] ${img_width}  ${margin_b} `} >
-                  <img src={title_img} alt={`movie title image`} className=" size-full object-cover object-center lg:object-top " />
+                  <img src={title_img} alt={`movie title image`} className=" size-full object-cover object-center lg:object-top xl:object-top " />
                 </div>
                 <div className= {` max-w-[950px] text-base text-zinc-50/75`} >
                  <p > {description} </p>

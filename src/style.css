@@ -59,6 +59,7 @@
     width: 200px ;
     height: 280px ;
 }
+
 .movie img{
     width: 100% ;
     height: 100% ;
@@ -68,32 +69,20 @@
 }
 
 
+#cardDescription{
+  opacity: 0 ;
+  transition: all 0.35s linear  ;
+}
+
+#movieCard_img:hover + #Div_cardDescription #cardDescription{
+  opacity: 1 ;
+}
+#movieCard_img + #Div_cardDescription {
+  /* opacity: 0 ; */
+  transition: all 2s linear  ;
+}
+#movieCard_img:hover + #Div_cardDescription {
+    background: linear-gradient(to bottom , rgba(32, 32, 32, 0.374) , rgba(13, 13, 13, 0.76)  );
+}
 
 
-  /* #SliderSection {
-    scroll-behavior: smooth;
-    transition: scroll 0.3s ease-in-out;
-  } */
-
-  /* #AllMovieSection button{
-    position: absolute;
-    height: 100%;
-    z-index: 10;
-    font-size: 25px;
-    color: rgba(255, 255, 255, 0.973) ;
-    transition: all 0.2s linear ;
-  } */
- 
-  /* .btnPrev{
-    background: linear-gradient(to right , rgba(0, 0, 0, 0.75) 16% , rgba(0, 0, 0, 0.25) , transparent ) ;
-  } */
-  /* .btnNext{
-    background: linear-gradient(to left ,rgba(0, 0, 0, 0.75) 16% , rgba(0, 0, 0, 0.25) , transparent ) ;
-  } */
-
-  /* .btnPrev:hover{
-    background: linear-gradient(to right  , rgba(0, 0, 0, 0.95) 16%  , rgba(0,0,0, 0.55), transparent ) ;
-  } */
-  /* .btnNext:hover{
-    background: linear-gradient(to left ,rgba(0, 0, 0, 0.95) 16% , rgba(0,0,0, 0.55), transparent ) ;
-  } */

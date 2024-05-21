@@ -1,5 +1,9 @@
 
 image = 'https://image.tmdb.org/t/p/w500/'
+video = 'https://api.themoviedb.org/3/movie/{movie_id}/videos'
+
+// muted without-control autoplay 
+video = https://www.youtube.com/embed/${videoKey}?autoplay=1&mute=1&controls=0&showinfo=0&modestbranding=0
 
 
 base url =  https://api.themoviedb.org/3

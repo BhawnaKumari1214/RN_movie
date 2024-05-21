@@ -5,7 +5,8 @@ import Movie_Sections from './Movie_Sections';
 import PrevNextBtn from './PrevNextBtn';
 
 
-function MovieSection_main() {
+function MovieSection_main( { Section_Url , Section_heading , page , cardType } ) {
+  // console.log(Section_heading)
 
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -17,10 +18,6 @@ function MovieSection_main() {
   const [MovieList, setMovieList] = useState([]);
   const allMoiveList = MovieList.results || [];
 
-
-    // useEffect(() => {
-    // fetchData("/movie/now_playing", setMovieList);
-    // }, []);
     
   const handlePrev = () => {
     const container = sliderRef.current;
@@ -35,14 +32,14 @@ function MovieSection_main() {
   useEffect(()=>{
     function handleResize(){
         setWindowWidth(window.innerWidth)
-        console.log(windowWidth)
+        // console.log(windowWidth)
     }
     window.addEventListener('resize', handleResize)
     return () => window.removeEventListener('resize', handleResize)
   },[windowWidth])
 
   useEffect(()=>{
-    const newScrollAmount = sliderRef.current ? Math.floor(sliderRef.current.clientWidth) : 0 ;
+    const newScrollAmount = sliderRef.current ? Math.floor(sliderRef.current.clientWidth + 5) : 0 ;
     setScrollAmount( newScrollAmount )
   },[windowWidth])
 
@@ -65,18 +62,23 @@ function MovieSection_main() {
     <>
      <div
       id="AllMovieSection"
-      className=" relative capitalize pt-5 pb-5 space-y-2 w-full ps-6 pe-2 bg-emerald-5 overflow-hidden "
+      className={` relative capitalize ${Section_heading == "All movies" ? 'mb-[0px]' : '' }  w-full pe-0  bg-emerald-5 overflow-hidden `}
     >
-      <MovieSection_header />
+      {/* <MovieSection_header Section_heading={Section_heading} /> */}
 
-      <div  className='relative h-fit w-full me-2 bg-blac '>
+      <div  className='relative h-fit w-full me-0 bg-blac '>
         <>
-          <PrevNextBtn handleNext={handleNext} handlePrev={handlePrev} isBeginning={isBeginning} isEnd={isEnd} />
+          <PrevNextBtn cardType={cardType} handleNext={handleNext} handlePrev={handlePrev} isBeginning={isBeginning} isEnd={isEnd} />
         </>
 
-        <div ref={sliderRef} id='SliderSection' className='no-scrollbar scroll-smooth transition-scroll duration-300 ease-in-out flex gap-2 overflow-auto '>
-           <Movie_Sections />
+        <div>
+
+      <MovieSection_header Section_heading={Section_heading} />
+
+        <div ref={sliderRef} className={`no-scrollbar scroll-smooth transition-scroll duration-300 ease-in-out flex flex-col overflow-auto pb-1 `}>
+           <Movie_Sections Section_heading={Section_heading} fetch_URl={Section_Url} page={page} />
         </div>      
+        </div>
       </div>
         
     </div>
